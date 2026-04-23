@@ -1,0 +1,525 @@
+import { Lesson, Quiz, Student, Class } from '@/app/types';
+
+export const mockLessons: Lesson[] = [
+  {
+    id: 'lesson-1',
+    title: {
+      en: 'Introduction to Mathematics',
+      hi: 'गणित का परिचय',
+      ta: 'கணிதத்தின் அறிமுகம்',
+      te: 'గణితం పరిచయం',
+      bn: 'গণিতের ভূমিকা',
+    },
+    description: {
+      en: 'Learn the basics of numbers and counting',
+      hi: 'संख्याओं और गिनती की मूल बातें सीखें',
+      ta: 'எண்கள் மற்றும் எண்ணுதலின் அடிப்படைகளைக் கற்றுக்கொள்ளுங்கள்',
+      te: 'సంఖ్యలు మరియు లెక్కింపు ప్రాథమికాలను నేర్చుకోండి',
+      bn: 'সংখ্যা এবং গণনার মূল বিষয় শিখুন',
+    },
+    subject: 'Mathematics',
+    grade: 1,
+    content: [
+      {
+        type: 'text',
+        content: {
+          en: 'Numbers are everywhere around us. Let\'s learn to count from 1 to 10!',
+          hi: 'संख्याएं हमारे चारों ओर हैं। आइए 1 से 10 तक गिनना सीखें!',
+          ta: 'எண்கள் நம்மைச் சுற்றி எங்கும் உள்ளன. 1 முதல் 10 வரை எண்ண கற்றுக்கொள்வோம்!',
+          te: 'సంఖ్యలు మన చుట్టూ అన్ని చోట్ల ఉన్నాయి. 1 నుండి 10 వరకు లెక్కించడం నేర్చుకుందాం!',
+          bn: 'সংখ্যা আমাদের চারপাশে সর্বত্র আছে। ১ থেকে ১০ পর্যন্ত গণনা করতে শিখি!',
+        },
+      },
+      {
+        type: 'interactive',
+        content: {
+          en: '1, 2, 3, 4, 5, 6, 7, 8, 9, 10',
+          hi: '१, २, ३, ४, ५, ६, ७, ८, ९, १०',
+          ta: '1, 2, 3, 4, 5, 6, 7, 8, 9, 10',
+          te: '1, 2, 3, 4, 5, 6, 7, 8, 9, 10',
+          bn: '১, ২, ৩, ৪, ৫, ৬, ৭, ৮, ৯, ১০',
+        },
+      },
+    ],
+    duration: 15,
+    difficulty: 'easy',
+  },
+  {
+    id: 'lesson-2',
+    title: {
+      en: 'Basic Addition',
+      hi: 'बुनियादी जोड़',
+      ta: 'அடிப்படை கூட்டல்',
+      te: 'ప్రాథమిక కూడిక',
+      bn: 'মৌলিক যোগ',
+    },
+    description: {
+      en: 'Learn to add numbers together',
+      hi: 'संख्याओं को जोड़ना सीखें',
+      ta: 'எண்களை ஒன்றாகச் சேர்க்க கற்றுக்கொள்ளுங்கள்',
+      te: 'సంఖ్యలను కలిపి జోడించడం నేర్చుకోండి',
+      bn: 'সংখ্যা যোগ করতে শিখুন',
+    },
+    subject: 'Mathematics',
+    grade: 1,
+    content: [
+      {
+        type: 'text',
+        content: {
+          en: 'Addition means putting things together. If you have 2 apples and get 3 more, you have 5 apples total!',
+          hi: 'जोड़ का मतलब है चीजों को एक साथ रखना। यदि आपके पास 2 सेब हैं और 3 और मिलते हैं, तो कुल 5 सेब हैं!',
+          ta: 'கூட்டல் என்றால் பொருட்களை ஒன்றாகச் சேர்ப்பது. உங்களிடம் 2 ஆப்பிள்கள் இருந்து 3 மேலும் கிடைத்தால், மொத்தம் 5 ஆப்பிள்கள்!',
+          te: 'కూడిక అంటే విషయాలను కలపడం. మీకు 2 ఆపిల్స్ ఉంటే మరియు 3 మరిన్ని వస్తే, మొత్తం 5 ఆపిల్స్!',
+          bn: 'যোগ মানে জিনিসগুলি একসাথে রাখা। আপনার যদি 2টি আপেল থাকে এবং আরও 3টি পান, তবে মোট 5টি আপেল!',
+        },
+      },
+    ],
+    duration: 20,
+    difficulty: 'easy',
+  },
+  {
+    id: 'lesson-3',
+    title: {
+      en: 'Introduction to Science',
+      hi: 'विज्ञान का परिचय',
+      ta: 'அறிவியல் அறிமுகம்',
+      te: 'విజ్ఞాన పరిచయం',
+      bn: 'বিজ্ঞানের ভূমিকা',
+    },
+    description: {
+      en: 'Discover the world around you through science',
+      hi: 'विज्ञान के माध्यम से अपने आसपास की दुनिया की खोज करें',
+      ta: 'அறிவியல் மூலம் உங்களைச் சுற்றியுள்ள உலகத்தைக் கண்டறியுங்கள்',
+      te: 'విజ్ఞానం ద్వారా మీ చుట్టూ ఉన్న ప్రపంచాన్ని కనుగొనండి',
+      bn: 'বিজ্ঞানের মাধ্যমে আপনার চারপাশের বিশ্ব আবিষ্কার করুন',
+    },
+    subject: 'Science',
+    grade: 2,
+    content: [
+      {
+        type: 'text',
+        content: {
+          en: 'Science helps us understand how things work. Let\'s explore plants, animals, and nature!',
+          hi: 'विज्ञान हमें यह समझने में मदद करता है कि चीजें कैसे काम करती हैं। आइए पौधों, जानवरों और प्रकृति का पता लगाएं!',
+          ta: 'விஞ்ஞானம் விஷயங்கள் எவ்வாறு செயல்படுகின்றன என்பதைப் புரிந்துகொள்ள உதவுகிறது. தாவரங்கள், விலங்குகள் மற்றும் இயற்கையை ஆராய்வோம்!',
+          te: 'విజ్ఞానం విషయాలు ఎలా పని చేస్తాయో అర్థం చేసుకోవడానికి సహాయపడుతుంది. మొక్కలు, జంతువులు మరియు ప్రకృతిని అన్వేషిద్దాం!',
+          bn: 'বিজ্ঞান আমাদের বুঝতে সাহায্য করে জিনিসগুলি কীভাবে কাজ করে। উদ্ভিদ, প্রাণী এবং প্রকৃতি অন্বেষণ করি!',
+        },
+      },
+    ],
+    duration: 25,
+    difficulty: 'easy',
+  },
+  {
+    id: 'lesson-4',
+    title: {
+      en: 'Hindi Alphabet',
+      hi: 'हिंदी वर्णमाला',
+      ta: 'இந்தி எழுத்துக்கள்',
+      te: 'హిందీ వర్ణమాల',
+      bn: 'হিন্দি বর্ণমালা',
+    },
+    description: {
+      en: 'Learn the Hindi alphabet and pronunciation',
+      hi: 'हिंदी वर्णमाला और उच्चारण सीखें',
+      ta: 'இந்தி எழுத்துக்கள் மற்றும் உச்சரிப்பைக் கற்றுக்கொள்ளுங்கள்',
+      te: 'హిందీ వర్ణమాల మరియు ఉచ్చారణను నేర్చుకోండి',
+      bn: 'হিন্দি বর্ণমালা এবং উচ্চারণ শিখুন',
+    },
+    subject: 'Language',
+    grade: 1,
+    content: [
+      {
+        type: 'text',
+        content: {
+          en: 'The Hindi alphabet has 13 vowels and 33 consonants. Let\'s start with vowels: अ आ इ ई उ ऊ',
+          hi: 'हिंदी वर्णमाला में 13 स्वर और 33 व्यंजन हैं। आइए स्वरों से शुरू करें: अ आ इ ई उ ऊ',
+          ta: 'இந்தி எழுத்துக்களில் 13 உயிர்கள் மற்றும் 33 மெய்கள் உள்ளன. உயிர்களுடன் தொடங்குவோம்: अ आ इ ई उ ऊ',
+          te: 'హిందీ వర్ణమాలలో 13 అచ్చులు మరియు 33 హల్లులు ఉన్నాయి. అచ్చులతో ప్రారంభిద్దాం: अ आ इ ई उ ऊ',
+          bn: 'হিন্দি বর্ণমালায় 13টি স্বরবর্ণ এবং 33টি ব্যঞ্জনবর্ণ রয়েছে। স্বরবর্ণ দিয়ে শুরু করি: अ आ इ ई उ ऊ',
+        },
+      },
+    ],
+    duration: 30,
+    difficulty: 'medium',
+  },
+  {
+    id: 'lesson-5',
+    title: {
+      en: 'Basic Subtraction',
+      hi: 'बुनियादी घटाव',
+      ta: 'அடிப்படை கழித்தல்',
+      te: 'ప్రాథమిక తీసివేత',
+      bn: 'মৌলিক বিয়োগ',
+    },
+    description: {
+      en: 'Learn to subtract numbers',
+      hi: 'संख्याओं को घटाना सीखें',
+      ta: 'எண்களைக் கழிக்க கற்றுக்கொள்ளுங்கள்',
+      te: 'సంఖ్యలను తీసివేయడం నేర్చుకోండి',
+      bn: 'সংখ্যা বিয়োগ করতে শিখুন',
+    },
+    subject: 'Mathematics',
+    grade: 1,
+    content: [
+      {
+        type: 'text',
+        content: {
+          en: 'Subtraction means taking away. If you have 5 apples and eat 2, you have 3 apples left!',
+          hi: 'घटाव का मतलब है कुछ लेना। यदि आपके पास 5 सेब हैं और 2 खा लेते हैं, तो 3 सेब बचते हैं!',
+          ta: 'கழித்தல் என்றால் எடுத்துச் செல்வது. உங்களிடம் 5 ஆப்பிள்கள் இருந்து 2 சாப்பிட்டால், 3 ஆப்பிள்கள் மீதமுள்ளன!',
+          te: 'తీసివేత అంటే తీసుకెళ్లడం. మీకు 5 ఆపిల్స్ ఉంటే 2 తింటే, 3 ఆపిల్స్ మిగిలి ఉంటాయి!',
+          bn: 'বিয়োগ মানে সরিয়ে নেওয়া। আপনার যদি 5টি আপেল থাকে এবং 2টি খান, তবে 3টি আপেল বাকি থাকে!',
+        },
+      },
+    ],
+    duration: 20,
+    difficulty: 'easy',
+  },
+  {
+    id: 'lesson-6',
+    title: {
+      en: 'Plants and Their Parts',
+      hi: 'पौधे और उनके भाग',
+      ta: 'தாவரங்கள் மற்றும் அவற்றின் பாகங்கள்',
+      te: 'మొక్కలు మరియు వాటి భాగాలు',
+      bn: 'উদ্ভিদ এবং তাদের অংশ',
+    },
+    description: {
+      en: 'Learn about different parts of plants and their functions',
+      hi: 'पौधों के विभिन्न भागों और उनके कार्यों के बारे में जानें',
+      ta: 'தாவரங்களின் பல்வேறு பகுதிகள் மற்றும் அவற்றின் செயல்பாடுகளைப் பற்றி அறியுங்கள்',
+      te: 'మొక్కల యొక్క వివిధ భాగాలు మరియు వాటి పనుల గురించి తెలుసుకోండి',
+      bn: 'উদ্ভিদের বিভিন্ন অংশ এবং তাদের কাজ সম্পর্কে জানুন',
+    },
+    subject: 'Science',
+    grade: 2,
+    content: [
+      {
+        type: 'text',
+        content: {
+          en: 'Plants have roots, stems, leaves, flowers, and fruits. Each part has an important job!',
+          hi: 'पौधों में जड़ें, तने, पत्तियां, फूल और फल होते हैं। प्रत्येक भाग का एक महत्वपूर्ण कार्य होता है!',
+          ta: 'தாவரங்களுக்கு வேர்கள், தண்டுகள், இலைகள், பூக்கள் மற்றும் பழங்கள் உள்ளன. ஒவ்வொரு பகுதிக்கும் ஒரு முக்கியமான வேலை உள்ளது!',
+          te: 'మొక్కలకు వేర్లు, కాండాలు, ఆకులు, పువ్వులు మరియు పండ్లు ఉంటాయి. ప్రతి భాగానికి ఒక ముఖ్యమైన పని ఉంటుంది!',
+          bn: 'উদ্ভিদের শিকড়, কাণ্ড, পাতা, ফুল এবং ফল থাকে। প্রতিটি অংশের একটি গুরুত্বপূর্ণ কাজ আছে!',
+        },
+      },
+    ],
+    duration: 25,
+    difficulty: 'medium',
+  },
+  {
+    id: 'lesson-7',
+    title: {
+      en: 'Our Solar System',
+      hi: 'हमारा सौर मंडल',
+      ta: 'நமது சூரிய குடும்பம்',
+      te: 'మన సౌర వ్యవస్థ',
+      bn: 'আমাদের সৌরজগত',
+    },
+    description: {
+      en: 'Explore the Sun, planets, and our place in space',
+      hi: 'सूर्य, ग्रहों और अंतरिक्ष में हमारे स्थान का अन्वेषण करें',
+      ta: 'சூரியன், கோள்கள் மற்றும் விண்வெளியில் நமது இடத்தை ஆராயுங்கள்',
+      te: 'సూర్యుడు, గ్రహాలు మరియు అంతరిక్షంలో మన స్థానాన్ని అన్వేషించండి',
+      bn: 'সূর্য, গ্রহ এবং মহাকাশে আমাদের স্থান অন্বেষণ করুন',
+    },
+    subject: 'Science',
+    grade: 3,
+    content: [
+      {
+        type: 'text',
+        content: {
+          en: 'The Solar System has 8 planets orbiting the Sun. Earth is the third planet from the Sun!',
+          hi: 'सौर मंडल में सूर्य की परिक्रमा करने वाले 8 ग्रह हैं। पृथ्वी सूर्य से तीसरा ग्रह है!',
+          ta: 'சூரிய குடும்பத்தில் சூரியனைச் சுற்றி வரும் 8 கோள்கள் உள்ளன. பூமி சூரியனில் இருந்து மூன்றாவது கோள்!',
+          te: 'సౌర వ్యవస్థలో సూర్యుని చుట్టూ తిరిగే 8 గ్రహాలు ఉన్నాయి. భూమి సూర్యుని నుండి మూడవ గ్రహం!',
+          bn: 'সৌরজগতে সূর্যের চারপাশে ঘুরছে 8টি গ্রহ। পৃথিবী সূর্য থেকে তৃতীয় গ্রহ!',
+        },
+      },
+    ],
+    duration: 30,
+    difficulty: 'medium',
+  },
+  {
+    id: 'lesson-8',
+    title: {
+      en: 'Community Helpers',
+      hi: 'समुदाय के सहायक',
+      ta: 'சமூக உதவியாளர்கள்',
+      te: 'కమ్యూనిటీ సహాయకులు',
+      bn: 'সম্প্রদায়ের সহায়ক',
+    },
+    description: {
+      en: 'Learn about people who help us every day',
+      hi: 'उन लोगों के बारे में जानें जो हर दिन हमारी मदद करते हैं',
+      ta: 'ஒவ்வொரு நாளும் நமக்கு உதவும் மக்களைப் பற்றி அறியுங்கள்',
+      te: 'ప్రతి రోజు మనకు సహాయపడే వ్యక్తుల గురించి తెలుసుకోండి',
+      bn: 'প্রতিদিন আমাদের সাহায্য করে এমন মানুষদের সম্পর্কে জানুন',
+    },
+    subject: 'Social Studies',
+    grade: 1,
+    content: [
+      {
+        type: 'text',
+        content: {
+          en: 'Doctors, teachers, police officers, and farmers are community helpers who make our lives better!',
+          hi: 'डॉक्टर, शिक्षक, पुलिस अधिकारी और किसान समुदाय के सहायक हैं जो हमारे जीवन को बेहतर बनाते हैं!',
+          ta: 'மருத்துவர்கள், ஆசிரியர்கள், காவல்துறை அதிகாரிகள் மற்றும் விவசாயிகள் நமது வாழ்க்கையை சிறப்பாக்கும் சமூக உதவியாளர்கள்!',
+          te: 'వైద్యులు, ఉపాధ్యాయులు, పోలీసు అధికారులు మరియు రైతులు మన జీవితాలను మెరుగుపరిచే కమ్యూనిటీ సహాయకులు!',
+          bn: 'ডাক্তার, শিক্ষক, পুলিশ অফিসার এবং কৃষক হলেন সম্প্রদায়ের সহায়ক যারা আমাদের জীবনকে আরও ভালো করে তোলে!',
+        },
+      },
+    ],
+    duration: 20,
+    difficulty: 'easy',
+  },
+];
+
+export const mockQuizzes: Quiz[] = [
+  {
+    id: 'quiz-1',
+    lessonId: 'lesson-1',
+    title: {
+      en: 'Counting Quiz',
+      hi: 'गिनती प्रश्नोत्तरी',
+      ta: 'எண்ணும் வினாடி வினா',
+      te: 'లెక్కింపు క్విజ్',
+      bn: 'গণনা কুইজ',
+    },
+    questions: [
+      {
+        id: 'q1',
+        question: {
+          en: 'What comes after 5?',
+          hi: '5 के बाद क्या आता है?',
+          ta: '5க்குப் பிறகு என்ன வரும்?',
+          te: '5 తర్వాత ఏమి వస్తుంది?',
+          bn: '5 এর পরে কী আসে?',
+        },
+        options: {
+          en: ['4', '6', '7', '3'],
+          hi: ['4', '6', '7', '3'],
+          ta: ['4', '6', '7', '3'],
+          te: ['4', '6', '7', '3'],
+          bn: ['৪', '৬', '৭', '৩'],
+        },
+        correctAnswer: 1,
+        explanation: {
+          en: '6 comes after 5 in the number sequence',
+          hi: 'संख्या क्रम में 5 के बाद 6 आता है',
+          ta: 'எண் வரிசையில் 5க்குப் பிறகு 6 வரும்',
+          te: 'సంఖ్య క్రమంలో 5 తర్వాత 6 వస్తుంది',
+          bn: 'সংখ্যা ক্রমানুসারে 5 এর পরে 6 আসে',
+        },
+      },
+      {
+        id: 'q2',
+        question: {
+          en: 'How many fingers do you have on one hand?',
+          hi: 'एक हाथ में कितनी उंगलियां होती हैं?',
+          ta: 'ஒரு கையில் எத்தனை விரல்கள் உள்ளன?',
+          te: 'ఒక చేతిలో ఎన్ని వేళ్లు ఉంటాయి?',
+          bn: 'একটি হাতে কয়টি আঙুল আছে?',
+        },
+        options: {
+          en: ['3', '4', '5', '6'],
+          hi: ['3', '4', '5', '6'],
+          ta: ['3', '4', '5', '6'],
+          te: ['3', '4', '5', '6'],
+          bn: ['৩', '৪', '৫', '৬'],
+        },
+        correctAnswer: 2,
+        explanation: {
+          en: 'We have 5 fingers on each hand',
+          hi: 'प्रत्येक हाथ में 5 उंगलियां होती हैं',
+          ta: 'ஒவ்வொரு கையிலும் 5 விரல்கள் உள்ளன',
+          te: 'ప్రతి చేతిలో 5 వేళ్లు ఉంటాయి',
+          bn: 'প্রতিটি হাতে 5টি আঙুল আছে',
+        },
+      },
+    ],
+    passingScore: 50,
+  },
+  {
+    id: 'quiz-2',
+    lessonId: 'lesson-2',
+    title: {
+      en: 'Addition Practice',
+      hi: 'जोड़ अभ्यास',
+      ta: 'கூட்டல் பயிற்சி',
+      te: 'కూడిక అభ్యాసం',
+      bn: 'যোগ অনুশীলন',
+    },
+    questions: [
+      {
+        id: 'q1',
+        question: {
+          en: 'What is 2 + 3?',
+          hi: '2 + 3 क्या है?',
+          ta: '2 + 3 என்ன?',
+          te: '2 + 3 ఎంత?',
+          bn: '2 + 3 কত?',
+        },
+        options: {
+          en: ['4', '5', '6', '3'],
+          hi: ['4', '5', '6', '3'],
+          ta: ['4', '5', '6', '3'],
+          te: ['4', '5', '6', '3'],
+          bn: ['৪', '৫', '৬', '৩'],
+        },
+        correctAnswer: 1,
+        explanation: {
+          en: '2 + 3 = 5',
+          hi: '2 + 3 = 5',
+          ta: '2 + 3 = 5',
+          te: '2 + 3 = 5',
+          bn: '২ + ৩ = ৫',
+        },
+      },
+      {
+        id: 'q2',
+        question: {
+          en: 'What is 1 + 1?',
+          hi: '1 + 1 क्या है?',
+          ta: '1 + 1 என்ன?',
+          te: '1 + 1 ఎంత?',
+          bn: '1 + 1 কত?',
+        },
+        options: {
+          en: ['1', '2', '3', '0'],
+          hi: ['1', '2', '3', '0'],
+          ta: ['1', '2', '3', '0'],
+          te: ['1', '2', '3', '0'],
+          bn: ['১', '২', '৩', '০'],
+        },
+        correctAnswer: 1,
+        explanation: {
+          en: '1 + 1 = 2',
+          hi: '1 + 1 = 2',
+          ta: '1 + 1 = 2',
+          te: '1 + 1 = 2',
+          bn: '১ + ১ = ২',
+        },
+      },
+    ],
+    passingScore: 50,
+  },
+  {
+    id: 'quiz-3',
+    lessonId: 'lesson-3',
+    title: {
+      en: 'Science Basics',
+      hi: 'विज्ञान की मूल बातें',
+      ta: 'அறிவியல் அடிப்படைகள்',
+      te: 'విజ్ఞాన ప్రాథమికాలు',
+      bn: 'বিজ্ঞানের মূল বিষয়',
+    },
+    questions: [
+      {
+        id: 'q1',
+        question: {
+          en: 'Which one is a living thing?',
+          hi: 'कौन सा एक जीवित चीज है?',
+          ta: 'எது ஒரு உயிரினம்?',
+          te: 'ఏది ఒక జీవి?',
+          bn: 'কোনটি একটি জীবন্ত জিনিস?',
+        },
+        options: {
+          en: ['Rock', 'Plant', 'Water', 'Air'],
+          hi: ['चट्टान', 'पौधा', 'पानी', 'हवा'],
+          ta: ['பாறை', 'தாவரம்', 'நீர்', 'காற்று'],
+          te: ['రాయి', 'మొక్క', 'నీరు', 'గాలి'],
+          bn: ['পাথর', 'উদ্ভিদ', 'পানি', 'বায়ু'],
+        },
+        correctAnswer: 1,
+        explanation: {
+          en: 'Plants are living things because they grow and need food and water',
+          hi: 'पौधे जीवित चीजें हैं क्योंकि वे बढ़ते हैं और उन्हें भोजन और पानी की आवश्यकता होती है',
+          ta: 'தாவரங்கள் உயிரினங்கள் ஏனெனில் அவை வளரும் மற்றும் உணவு மற்றும் தண்ணீர் தேவைப்படும்',
+          te: 'మొక్కలు జీవులు ఎందుకంటే అవి పెరుగుతాయి మరియు ఆహారం మరియు నీరు అవసరం',
+          bn: 'উদ্ভিদ জীবন্ত জিনিস কারণ তারা বৃদ্ধি পায় এবং খাদ্য এবং পানির প্রয়োজন হয়',
+        },
+      },
+    ],
+    passingScore: 50,
+  },
+];
+
+export const mockStudents: Student[] = [
+  {
+    id: 'student-1',
+    name: 'Ravi Kumar',
+    grade: 1,
+    classId: 'class-1',
+    language: 'hi',
+    progress: {
+      lessonsCompleted: ['lesson-1', 'lesson-2'],
+      quizzesCompleted: [
+        { quizId: 'quiz-1', score: 2, totalQuestions: 2, completedAt: '2026-02-01', attempts: 1 },
+        { quizId: 'quiz-2', score: 1, totalQuestions: 2, completedAt: '2026-02-02', attempts: 2 },
+      ],
+      totalScore: 75,
+      lastActive: '2026-02-02',
+    },
+  },
+  {
+    id: 'student-2',
+    name: 'Priya Sharma',
+    grade: 1,
+    classId: 'class-1',
+    language: 'hi',
+    progress: {
+      lessonsCompleted: ['lesson-1'],
+      quizzesCompleted: [
+        { quizId: 'quiz-1', score: 2, totalQuestions: 2, completedAt: '2026-02-01', attempts: 1 },
+      ],
+      totalScore: 100,
+      lastActive: '2026-02-01',
+    },
+  },
+  {
+    id: 'student-3',
+    name: 'Arun Patel',
+    grade: 1,
+    classId: 'class-1',
+    language: 'hi',
+    progress: {
+      lessonsCompleted: [],
+      quizzesCompleted: [],
+      totalScore: 0,
+      lastActive: '2026-01-30',
+    },
+  },
+  {
+    id: 'student-4',
+    name: 'Lakshmi Reddy',
+    grade: 2,
+    classId: 'class-2',
+    language: 'te',
+    progress: {
+      lessonsCompleted: ['lesson-3'],
+      quizzesCompleted: [],
+      totalScore: 0,
+      lastActive: '2026-02-01',
+    },
+  },
+];
+
+export const mockClasses: Class[] = [
+  {
+    id: 'class-1',
+    name: 'Grade 1 - Section A',
+    grade: 1,
+    teacherId: 'teacher-1',
+    students: ['student-1', 'student-2', 'student-3'],
+  },
+  {
+    id: 'class-2',
+    name: 'Grade 2 - Section A',
+    grade: 2,
+    teacherId: 'teacher-1',
+    students: ['student-4'],
+  },
+];
